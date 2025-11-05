@@ -1,7 +1,3 @@
-# Revenue-Customer-Analytics-Dashboard-Tricket-App
-<!-- Banner Image -->
-![Revenue & Customer Analytics Dashboard](https://github.com/SHAHNAWAZSERAJI/Revenue-Customer-Analytics-Dashboard/blob/main/assets/banner_revenue_dashboard.png)
-
 <h1 align="center">📊 Revenue & Customer Analytics Dashboard – Tricket App</h1>
 
 <p align="center">
@@ -17,7 +13,7 @@
   <img src="https://img.shields.io/badge/Data%20Analyst%20Portfolio-Showcase-blue?style=for-the-badge&logo=github">
   <img src="https://img.shields.io/badge/ETL%20Automation-Enabled-green?style=for-the-badge&logo=microsoft">
   <img src="https://img.shields.io/github/stars/SHAHNAWAZSERAJI/Revenue-Customer-Analytics-Dashboard?style=for-the-badge" alt="GitHub stars">
-  <a href="https://www.linkedin.com/in/md-shahnawaz-seraji/">
+  <a href="https://www.linkedin.com/in/shahnawazseraji/">
     <img src="https://img.shields.io/badge/View%20on%20LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge">
   </a>
 </p>

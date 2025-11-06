@@ -10,7 +10,7 @@
   <!-- Badges -->
   <img src="https://img.shields.io/badge/Power%20BI-Dashboard-yellow?style=for-the-badge&logo=powerbi" alt="Power BI Badge">
   <img src="https://img.shields.io/badge/SQL-MySQL-orange?style=for-the-badge&logo=mysql">
-  <img src="https://img.shields.io/badge/Data%20Analyst%20Portfolio-Showcase-blue?style=for-the-badge&logo=github">
+ <a href="https://github.com/SHAHNAWAZSERAJI/"> <img src="https://img.shields.io/badge/Data%20Analyst%20Portfolio-Showcase-blue?style=for-the-badge&logo=github">
   <img src="https://img.shields.io/badge/ETL%20Automation-Enabled-green?style=for-the-badge&logo=microsoft">
   <img src="https://img.shields.io/github/stars/SHAHNAWAZSERAJI/Revenue-Customer-Analytics-Dashboard?style=for-the-badge" alt="GitHub stars">
   <a href="https://www.linkedin.com/in/shahnawazseraji/">

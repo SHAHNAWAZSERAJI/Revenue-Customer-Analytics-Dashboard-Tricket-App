@@ -13,18 +13,11 @@
 [![DataModel](https://img.shields.io/badge/Data%20Model-FF8C00?style=for-the-badge&logo=databricks)](#-data-model-design)
 [![Wireframe](https://img.shields.io/badge/Wireframes-FF69B4?style=for-the-badge&logo=powerbi)](#-power-bi-wireframe-mockups)
 [![Insights](https://img.shields.io/badge/Key%20Insights-9370DB?style=for-the-badge&logo=insight)](#-business-insights--impact)
-
-</p>
-
-<p align="center">
-  <!-- Badges -->
-  <img src="https://img.shields.io/badge/Power%20BI-Dashboard-yellow?style=for-the-badge&logo=powerbi" alt="Power BI Badge">
-  <img src="https://img.shields.io/badge/SQL-MySQL-orange?style=for-the-badge&logo=mysql">
- <a href="https://github.com/SHAHNAWAZSERAJI/"> <img src="https://img.shields.io/badge/Data%20Analyst%20Portfolio-Showcase-blue?style=for-the-badge&logo=github">
-  <img src="https://img.shields.io/badge/ETL%20Automation-Enabled-green?style=for-the-badge&logo=microsoft">
-  <img src="https://img.shields.io/github/stars/SHAHNAWAZSERAJI/Revenue-Customer-Analytics-Dashboard?style=for-the-badge" alt="GitHub stars">
-  <a href="https://www.linkedin.com/in/shahnawazseraji/">
+<a href="https://www.linkedin.com/in/shahnawazseraji/">
     <img src="https://img.shields.io/badge/View%20on%20LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge">
+    <a href="https://github.com/SHAHNAWAZSERAJI/"> <img src="https://img.shields.io/badge/Data%20Analyst%20Portfolio-Showcase-blue?style=for-the-badge&logo=github">
+</p>
+  
   </a>
 </p>
 

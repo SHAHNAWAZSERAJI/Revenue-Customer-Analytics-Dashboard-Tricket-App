@@ -7,7 +7,7 @@
 ---
 <p align="center">
 
-[![Overview](https://img.shields.io/badge/Overview-1E90FF?style=for-the-badge&logo=markdown)](#-project-overview)
+[![Overview](https://img.shields.io/badge/SECTION-Overview-1E90FF?style=for-the-badge&logo=markdown)](#-project-overview)
 [![KPIs](https://img.shields.io/badge/KPIs-32CD32?style=for-the-badge&logo=target)](#-key-kpis-tracked)
 [![SQL](https://img.shields.io/badge/SQL%20Queries-4169E1?style=for-the-badge&logo=database)](#-sql-queries-used)
 [![DataModel](https://img.shields.io/badge/Data%20Model-FF8C00?style=for-the-badge&logo=databricks)](#-data-model-design)

@@ -77,7 +77,51 @@ This solution automates reporting pipelines, integrates transactional and engage
 - 📧 **Email Alerts & Reports** – Auto-scheduled updates for business heads  
 
 ---
+## 🧮 Data Model Design  
 
+Power BI **Star Schema** model built on SQL-processed tables:
+
+Fact_Revenue (contest_id, date, revenue, payout, profit_margin)
+|
+|-- Dim_Contest (contest_id, contest_type, match_type, region)
+|-- Dim_User (user_id, gender, state, signup_date)
+|-- Dim_Date (date_id, month, quarter, year)
+|-- Dim_Channel (channel_id, acquisition_source, campaign_type)
+
+yaml
+Copy code
+
+<p align="center">
+  <img src="assets/revenue_data_model.png" alt="Revenue Data Model Diagram" width="85%">
+</p>
+
+---
+
+## 📊 Power BI Wireframe Mockups  
+
+### Dashboard Layout Overview  
+
+📍 Page 1 – Revenue Overview
+→ KPI Cards (Total Revenue, Payouts, Profit Margin)
+→ Line Chart: Revenue Trend (Daily/Monthly)
+→ Bar Chart: Revenue by Contest Type
+→ Matrix: Top Performing Contests
+📍 Page 2 – Customer Insights
+→ Cohort Retention Heatmap
+→ Pie Chart: User Segmentation (High vs Low Value)
+→ KPI: ARPU, Repeat Users, Conversion Rate
+📍 Page 3 – Validation & QA
+→ Source vs Target Revenue Check
+→ Data Refresh Status Indicator
+
+pgsql
+Copy code
+
+<p align="center">
+  <img src="assets/revenue_wireframe.png" alt="Power BI Wireframe Mockup" width="90%">
+</p>
+
+---
 ## 📈 **Power BI Dashboard Preview**
 1.
 <p align="center"><img width="1536" height="1024" alt="REVENUE TRENDS -TRICKET" src="https://github.com/user-attachments/assets/4298b111-7fde-4ea1-bd77-26e945f478ff" />
@@ -85,6 +129,120 @@ This solution automates reporting pipelines, integrates transactional and engage
 2.<img width="1536" height="1024" alt="TRICKET-USER RETENTION" src="https://github.com/user-attachments/assets/402ebaa2-5920-4c70-aa1b-af03d47ca51b" />
 
 ---
+## 🧩 SQL Queries Used  
+
+Below are some key SQL queries used in the **Revenue & Customer Analytics Dashboard – Tricket App** project.  
+These queries were essential for **data extraction, validation, transformation, and KPI computation** before building the Power BI model.  
+
+---
+
+### 1️⃣ Revenue Summary by Contest Type
+```sql
+SELECT 
+    contest_type,
+    COUNT(DISTINCT contest_id) AS total_contests,
+    SUM(entry_fee * total_players) AS total_revenue,
+    SUM(total_payout) AS total_payout,
+    (SUM(entry_fee * total_players) - SUM(total_payout)) AS net_margin,
+    ROUND(((SUM(entry_fee * total_players) - SUM(total_payout)) / SUM(entry_fee * total_players)) * 100, 2) AS margin_percent
+FROM contest_revenue
+GROUP BY contest_type
+ORDER BY total_revenue DESC;
+- Purpose:
+Calculates revenue, payouts, and profit margin for each contest type (e.g., Live, Upcoming, Free Play).
+
+2️⃣ Top Performing Users by Lifetime Winnings
+SELECT 
+    user_id,
+    username,
+    SUM(winnings) AS total_winnings,
+    COUNT(DISTINCT contest_id) AS contests_played,
+    ROUND(AVG(prediction_accuracy)*100, 2) AS avg_accuracy_pct
+FROM user_performance
+GROUP BY user_id, username
+HAVING COUNT(DISTINCT contest_id) > 10
+ORDER BY total_winnings DESC
+LIMIT 10;
+
+- Purpose:
+Identifies high-value users based on lifetime winnings and accuracy — used for loyalty insights & targeted campaigns.
+
+3️⃣ Daily Active Users (DAU) & Paying Users Trend
+
+SELECT 
+    event_date,
+    COUNT(DISTINCT user_id) AS daily_active_users,
+    COUNT(DISTINCT CASE WHEN is_premium = 1 THEN user_id END) AS daily_paying_users
+FROM user_activity
+GROUP BY event_date
+ORDER BY event_date;
+
+SELECT 
+    event_date,
+    COUNT(DISTINCT user_id) AS daily_active_users,
+    COUNT(DISTINCT CASE WHEN is_premium = 1 THEN user_id END) AS daily_paying_users
+FROM user_activity
+GROUP BY event_date
+ORDER BY event_date;
+
+4️⃣ Average Revenue Per User (ARPU)
+
+SELECT 
+    ROUND(SUM(total_revenue) / COUNT(DISTINCT user_id), 2) AS arpu
+FROM (
+    SELECT 
+        u.user_id,
+        SUM(c.entry_fee) AS total_revenue
+    FROM contest_entries c
+    JOIN users u ON c.user_id = u.user_id
+    GROUP BY u.user_id
+) AS revenue_by_user;
+
+Purpose:
+Computes ARPU — a critical KPI showing user monetization efficiency for the Tricket platform.
+
+5️⃣ Revenue Validation Check (ETL QA)
+
+SELECT 
+    t1.business_date,
+    t1.total_revenue_source AS source_revenue,
+    t2.total_revenue_target AS target_revenue,
+    (t1.total_revenue_source - t2.total_revenue_target) AS diff
+FROM source_revenue_summary t1
+JOIN target_revenue_summary t2
+ON t1.business_date = t2.business_date
+WHERE ABS(t1.total_revenue_source - t2.total_revenue_target) > 0;
+
+Purpose:
+Performs QA to ensure no mismatches between source & transformed datasets before Power BI ingestion.
+
+6️⃣ Retention Cohort Analysis
+
+WITH user_cohorts AS (
+    SELECT 
+        user_id,
+        MIN(DATE(first_contest_date)) AS cohort_date
+    FROM user_contests
+    GROUP BY user_id
+)
+SELECT 
+    DATE_DIFF(u.event_date, c.cohort_date, DAY)/7 AS week_number,
+    COUNT(DISTINCT u.user_id) AS retained_users
+FROM user_activity u
+JOIN user_cohorts c ON u.user_id = c.user_id
+GROUP BY cohort_date, week_number
+ORDER BY cohort_date, week_number;
+
+Purpose:
+Tracks user retention over weeks to identify engagement decay and predict churn patterns.
+
+💡 Note:
+All queries are optimized for MySQL and used within scheduled ETL pipelines.
+Final aggregated outputs are pushed to Power BI using an automated dataflow for real-time updates.
+
+
+---
+
 
 ## ⚙️ **Data Model & Design**
 

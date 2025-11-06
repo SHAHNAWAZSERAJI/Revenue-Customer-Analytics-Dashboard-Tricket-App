@@ -12,7 +12,7 @@
 [![SQL](https://img.shields.io/badge/SQL%20Queries-4169E1?style=for-the-badge&logo=database)](#-sql-queries-used)
 [![DataModel](https://img.shields.io/badge/Data%20Model-FF8C00?style=for-the-badge&logo=databricks)](#-data-model-design)
 [![Wireframe](https://img.shields.io/badge/Wireframes-FF69B4?style=for-the-badge&logo=powerbi)](#-power-bi-wireframe-mockups)
-[![Insights](https://img.shields.io/badge/Key%20Insights-9370DB?style=for-the-badge&logo=insight)](#-business-insights--impact)
+[![Insights](https://img.shields.io/badge/Key%20Insights-9370DB?style=for-the-badge&logo=insight)](#-business-impact-summary)
 <a href="https://www.linkedin.com/in/shahnawazseraji/">
     <img src="https://img.shields.io/badge/View%20on%20LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge">
     <a href="https://github.com/SHAHNAWAZSERAJI/"> <img src="https://img.shields.io/badge/Data%20Analyst%20Portfolio-Showcase-blue?style=for-the-badge&logo=github">
@@ -176,7 +176,7 @@ Fact_Revenue (contest_id, date, revenue, payout, profit_margin)
 
 ---
 
-## 🧩 **Business Impact Summary**
+## 🧩 ****
 
 | Impact Area | Before | After |
 |--------------|--------|-------|

@@ -7,12 +7,12 @@
 ---
 <p align="center">
 
-[![Overview](https://img.shields.io/badge/Section-Overview-1E90FF?style=for-the-badge&logo=markdown)](#-project-overview)
-[![KPIs](https://img.shields.io/badge/Section-KPIs-32CD32?style=for-the-badge&logo=target)](#-key-kpis-tracked)
-[![SQL](https://img.shields.io/badge/Section-SQL%20Queries-4169E1?style=for-the-badge&logo=database)](#-sql-queries-used)
-[![DataModel](https://img.shields.io/badge/Section-Data%20Model-FF8C00?style=for-the-badge&logo=databricks)](#-data-model-design)
-[![Wireframe](https://img.shields.io/badge/Section-Wireframes-FF69B4?style=for-the-badge&logo=powerbi)](#-power-bi-wireframe-mockups)
-[![Insights](https://img.shields.io/badge/Section-Key%20Insights-9370DB?style=for-the-badge&logo=insight)](#-business-insights--impact)
+[![Overview](https://img.shields.io/badge/Overview-1E90FF?style=for-the-badge&logo=markdown)](#-project-overview)
+[![KPIs](https://img.shields.io/badge/KPIs-32CD32?style=for-the-badge&logo=target)](#-key-kpis-tracked)
+[![SQL](https://img.shields.io/badge/SQL%20Queries-4169E1?style=for-the-badge&logo=database)](#-sql-queries-used)
+[![DataModel](https://img.shields.io/badge/Data%20Model-FF8C00?style=for-the-badge&logo=databricks)](#-data-model-design)
+[![Wireframe](https://img.shields.io/badge/Wireframes-FF69B4?style=for-the-badge&logo=powerbi)](#-power-bi-wireframe-mockups)
+[![Insights](https://img.shields.io/badge/Key%20Insights-9370DB?style=for-the-badge&logo=insight)](#-business-insights--impact)
 
 </p>
 

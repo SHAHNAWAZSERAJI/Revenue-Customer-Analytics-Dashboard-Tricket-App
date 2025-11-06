@@ -183,16 +183,7 @@ Fact_Revenue (contest_id, date, revenue, payout, profit_margin)
 | **Data Accuracy** | Inconsistent | 100% Validated with SQL |
 | **Retention Visibility** | Partial | 360° Customer View |
 
----
 
-## 📬 **Connect With Me**
-
-👤 **MD Shahnawaz**  
-🔗 [LinkedIn](https://www.linkedin.com/in/shahnawazseraji/)  
-🌐 [GitHub Portfolio](https://github.com/SHAHNAWAZSERAJI)  
-📧 **mdshahnawazseraji@gmail.com**
-
----
 
 <p align="center">
   ⭐ If you found this project useful, don’t forget to <b>star</b> the repository and follow for more Power BI & SQL projects!
@@ -306,7 +297,8 @@ ORDER BY cohort_date, week_number;
 Purpose:
 Tracks user retention over weeks to identify engagement decay and predict churn patterns.
 
-
+```
+---
 
 ---
 💡 Note:
@@ -368,7 +360,7 @@ Final aggregated outputs are pushed to Power BI using an automated dataflow for 
 👤 **MD Shahnawaz**  
 🔗 [LinkedIn](https://www.linkedin.com/in/shahnawazseraji/)  
 🌐 [GitHub Portfolio](https://github.com/SHAHNAWAZSERAJI)  
-📧 **mdshahnawazseraji@gmail.com**
+📧 **md.shanwaz026@gmail.com**
 
 ---
 
